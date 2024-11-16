@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Посмотри в окно</title>
+    <link rel="stylesheet" href="./fonts/fonts.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/preloader.css" />
+    <link rel="stylesheet" href="./styles/error.css" />
+  </head>
+  <body class="page">
+    <main class="content">
+      <section class="result">
+        <div class="result__video-container">
+          <video src="" controls class="result__video" poster=""></video>
+        </div>
+        <form class="search-form">
+          <fieldset class="search-form__fieldset">
+            <h2 class="search-form__fieldset-title">Город</h2>
+            <label class="search-form__label">
+              <span class="search-form__label-text visually-hidden">Город</span>
+              <input
+                type="text"
+                placeholder="Санкт Петербург, например"
+                name="city"
+                class="search-form__textfield"
+              />
+            </label>
+          </fieldset>
+          <fieldset class="search-form__fieldset">
+            <h2 class="search-form__fieldset-title">Время суток</h2>
+            <div class="search-form__checkbox-list">
+              <label class="search-form__label">
+                <input
+                  type="checkbox"
+                  name="time"
+                  value="morning"
+                  class="search-form__checkbox visually-hidden"
+                />
+                <span class="search-form__pseudo-checkbox"></span>
+                <span class="search-form__label-text">Утро</span>
+              </label>
+              <label class="search-form__label">
+                <input
+                  type="checkbox"
+                  name="time"
+                  value="afternoon"
+                  class="search-form__checkbox visually-hidden"
+                />
+                <span class="search-form__pseudo-checkbox"></span>
+                <span class="search-form__label-text">День</span>
+              </label>
+              <label class="search-form__label">
+                <input
+                  type="checkbox"
+                  name="time"
+                  value="night"
+                  class="search-form__checkbox visually-hidden"
+                />
+                <span class="search-form__pseudo-checkbox"></span>
+                <span class="search-form__label-text">Ночь</span>
+              </label>
+            </div>
+          </fieldset>
+          <button type="submit" class="button search-form__submit-button">
+            Найти
+          </button>
+        </form>
+      </section>
+      <section class="content__details">
+        <h1 class="title">
+          <span class="content__accent">По-</span><br />смотри<br />в окно
+        </h1>
+        <ul class="content__list">
+          <!-- ЗДЕСЬ ОКАЖУТСЯ ТЕМПЛЕЙТЫ КАРТОЧЕК -->
+          <li class="content__list-item">
+          <a id="32" class="content__card-link content__card-link_current" href="#0">
+            <article class="content__video-card">
+              <div class="content__video-card-description-container">
+                <h2 class="content__video-card-title">Белгород</h2>
+                <p class="content__video-card-description">Ночной Белгород</p>
+              </div>
+              <img class="content__video-card-thumbnail" src="https://v-content.practicum-team.ru/uploads/Belgorod_Noch_mp4_thumb_8e63aba026.png" alt="ночной Белгород">
+            </article>
+           </a>
+
+          </li>
+        <li class="content__list-item">
+          <a id="33" class="content__card-link" href="#0">
+            <article class="content__video-card">
+              <div class="content__video-card-description-container">
+                <h2 class="content__video-card-title">Адлер</h2>
+                <p class="content__video-card-description">Адлер утром</p>
+              </div>
+              <img class="content__video-card-thumbnail" src="https://v-content.practicum-team.ru/uploads/Adler_Utro_mp4_thumb_aa34fe8f1a.png" alt="Адлер утром">
+            </article>
+          </a>
+        </li>
+        <li class="content__list-item">
+          <a id="34" class="content__card-link" href="#0">
+            <article class="content__video-card">
+              <div class="content__video-card-description-container">
+                <h2 class="content__video-card-title">Воронеж</h2>
+                <p class="content__video-card-description">Воронеж днем</p>
+              </div>
+              <img class="content__video-card-thumbnail" src="https://v-content.practicum-team.ru/uploads/Voronezh_Den_mp4_thumb_f15c5913ca.png" alt="Воронеж днем">
+            </article>
+          </a>
+        </li>
+        <li class="content__list-item">
+          <a id="35" class="content__card-link" href="#0">
+            <article class="content__video-card">
+              <div class="content__video-card-description-container">
+                <h2 class="content__video-card-title">Дубаи</h2>
+                <p class="content__video-card-description">Утро в Дубае</p>
+              </div>
+              <img class="content__video-card-thumbnail" src="https://v-content.practicum-team.ru/uploads/Dubaj_Utro_mp4_thumb_531e868753.png" alt="Утро в Дубае">
+            </article>
+          </a>
+        </li>
+        <li class="content__list-item">
+          <a id="36" class="content__card-link" href="#0">
+            <article class="content__video-card">
+              <div class="content__video-card-description-container">
+                <h2 class="content__video-card-title">Зеленоградск</h2>
+                <p class="content__video-card-description">Дневной Зеленоградск</p>
+              </div>
+              <img class="content__video-card-thumbnail" src="https://v-content.practicum-team.ru/uploads/Zelenogradsk_Den_mp4_thumb_308d520d6c.png" alt="Дневной Зеленоградск">
+            </article>
+          </a>
+        </li>
+        </ul>
+      </section>
+    </main>
+
+    <!-- ТЕМПЛЕЙТЫ -->
+
+    <template class="preloader-template">
+      <div class="preloader">
+        <div class="preloader-chasing-squares">
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+        </div>
+      </div>
+    </template>
+
+    <template class="cards-list-item-template">
+      <li class="content__list-item">
+        <a href="#0" class="content__card-link">
+          <article class="content__video-card">
+            <div class="content__video-card-description-container">
+              <h2 class="content__video-card-title"></h2>
+              <p class="content__video-card-description"></p>
+            </div>
+            <img src="" alt="" class="content__video-card-thumbnail" />
+          </article>
+        </a>
+      </li>
+    </template>
+    <template class="more-button-template">
+      <li><button class="button more-button">Показать еще</button></li>
+    </template>
+
+    <template class="error-template">
+      <div class="error">
+        <h2 class="error__title"></h2>
+      </div>
+    </template>
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>
